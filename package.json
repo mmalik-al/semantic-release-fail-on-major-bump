@@ -41,18 +41,17 @@
     "extends": "conventional-changelog-evelyn/release.config.js"
   },
   "devDependencies": {
-    "@semantic-release/changelog": "^6.0.3",
-    "@semantic-release/git": "^10.0.1",
-    "commitlint": "^19.7.1",
-    "conventional-changelog-evelyn": "^2.0.0",
-    "eslint": "^9.20.1",
-    "eslint-plugin-evelyn": "^10.0.1",
-    "husky": "^9.1.7",
-    "lint-staged": "^15.4.3",
-    "semantic-release": "^24.2.3",
-    "sort-package-json": "^2.14.0"
+    "@semantic-release/changelog": "6.0.3",
+    "@semantic-release/git": "10.0.1",
+    "commitlint": "19.8.1",
+    "conventional-changelog-evelyn": "2.0.1",
+    "eslint": "9.35.0",
+    "husky": "9.1.7",
+    "lint-staged": "16.1.6",
+    "semantic-release": "24.2.7",
+    "sort-package-json": "3.4.0"
   },
   "engines": {
-    "node": ">=12.0.0"
+    "node": ">=20.0.0"
   }
 }

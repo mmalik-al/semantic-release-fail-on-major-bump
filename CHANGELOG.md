@@ -1,5 +1,20 @@
 # Changelog
 
+## v1.1.0
+
+**[`v1.0.2...v1.1.0`](https://github.com/mmalik-al/semantic-release-fail-on-major-bump/compare/v1.0.2...v1.1.0)** - **2025-09-09**
+
+### 🧹 Internal
+
+- Add npm link self instructions to development testing instructions [`9c27b00`](https://github.com/mmalik-al/semantic-release-fail-on-major-bump/commit/9c27b00)
+
+### Other
+
+- Adds workflow dispatch trigger [`6c0cdb4`](https://github.com/mmalik-al/semantic-release-fail-on-major-bump/commit/6c0cdb4)
+- Allows disabling the check via env var [`7a59bd3`](https://github.com/mmalik-al/semantic-release-fail-on-major-bump/commit/7a59bd3)
+- Enables automated releases on push [`9e422e2`](https://github.com/mmalik-al/semantic-release-fail-on-major-bump/commit/9e422e2)
+- Updates dependencies and Node engine [`944f33d`](https://github.com/mmalik-al/semantic-release-fail-on-major-bump/commit/944f33d)
+
 ## v1.0.2
 
 **[`v1.0.1...v1.0.2`](https://github.com/evelynhathaway/semantic-release-fail-on-major-bump/compare/v1.0.1...v1.0.2)** - **2025-02-17**

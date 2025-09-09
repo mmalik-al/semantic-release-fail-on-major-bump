@@ -57,12 +57,64 @@ export default {
 ### Testing
 
 Make a either a `Breaking:` or non-breaking typed commit and then see if the error was thrown if expected while running
-a dummy dry-run release.
+ a dummy dry-run release.
 
 ```bash
 npm link
 npm link semantic-release-fail-on-major-bump
 npm run test-release
+```
+
+## CI override via environment variable
+
+If you need to temporarily allow a major release (for example from GitHub Actions), set the following environment variable to a truthy value to disable this plugin's check for that run. Per semantic-release’s plugin guide, environment variables are read from the `context.env` object that semantic-release provides to plugins (this is automatically populated from the process environment in CI):
+
+- FAIL_ON_MAJOR_BUMP_DISABLE (default)
+  - Accepted truthy values: `1`, `true`, `yes`, `on` (case-insensitive)
+
+You can also customize the env var name via plugin options (see below).
+
+Examples:
+
+- Unix shells:
+  ```bash
+  export FAIL_ON_MAJOR_BUMP_DISABLE=true
+  npx semantic-release
+  ```
+
+- GitHub Actions:
+  ```yaml
+  jobs:
+    release:
+      runs-on: ubuntu-latest
+      steps:
+        - uses: actions/checkout@v4
+        - uses: actions/setup-node@v4
+          with:
+            node-version: 20
+        - run: npm ci
+        - name: Release
+          env:
+            FAIL_ON_MAJOR_BUMP_DISABLE: true
+          run: npx semantic-release
+  ```
+
+### Optional plugin configuration
+
+You can override the env var name via plugin options in your semantic-release config:
+
+```js
+export default {
+  plugins: [
+    [
+      'semantic-release-fail-on-major-bump',
+      {
+        // If set, the plugin will read this env var from context.env
+        disableEnvVar: 'ALLOW_MAJOR_RELEASE'
+      }
+    ]
+  ]
+};
 ```
 
 ## License

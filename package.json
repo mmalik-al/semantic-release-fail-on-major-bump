@@ -1,5 +1,5 @@
 {
-  "name": "semantic-release-fail-on-major-bump",
+  "name": "semantic-release-fail-on-major-bump-env",
   "version": "1.0.2",
   "description": "Semantic release plugin that prevents publishing major version bumps",
   "keywords": [
@@ -7,16 +7,16 @@
     "plugin",
     "ci"
   ],
-  "homepage": "https://github.com/evelynhathaway/semantic-release-fail-on-major-bump#readme",
+  "homepage": "https://github.com/mmalik-al/semantic-release-fail-on-major-bump#readme",
   "bugs": {
-    "url": "https://github.com/evelynhathaway/semantic-release-fail-on-major-bump/issues"
+    "url": "https://github.com/mmalik-al/semantic-release-fail-on-major-bump/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/evelynhathaway/semantic-release-fail-on-major-bump.git"
+    "url": "git+https://github.com/mmalik-al/semantic-release-fail-on-major-bump.git"
   },
   "license": "MIT",
-  "author": "Evelyn Hathaway <npm@evelyn.dev> (https://evelyn.dev)",
+  "author": "Maciek Malik",
   "sideEffects": false,
   "main": "./lib/index.js",
   "directories": {
